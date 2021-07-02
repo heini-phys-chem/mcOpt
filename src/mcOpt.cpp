@@ -25,8 +25,6 @@
 
 int main(int argc, char *argv[]) {
 
-  std::cout << "\n[-] Optimize Molecule" << std::endl;
-
   McOpt::Option opts = McOpt::get_options(argc, argv);
 
   OpenBabel::OBMol mol = McOpt::readfile(opts.molecule);
@@ -36,7 +34,7 @@ int main(int argc, char *argv[]) {
 
   McOpt::writefile(mol, opts.fout);
 
-  std::cout << "[+] Optimize Molecule, Energy = " << energy << "\n" << std::endl;
+  std::cout << "[+] Optimize Molecule, Energy = " << energy << std::endl;
 
 }
 
